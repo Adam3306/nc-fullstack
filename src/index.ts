@@ -16,6 +16,7 @@ const app = express();
 app.use(express.json());
 
 // Process a video file from Cloud Storage into 360p
+// @ts-ignore
 app.post("/process-video", async (req, res) => {
   // Get the bucket and filename from the Cloud Pub/Sub message
   let data;
